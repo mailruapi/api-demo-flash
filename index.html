@@ -14,9 +14,13 @@
 			function flashLog(data){
 				console.log(data);
 			}
+			
+			mailru.loader.reqire('api', function(){
+				mailru.events.listen(mailru.app.events.get)
+			})
 		</script>
-		<object id="flash-demo" name="flash-demo" width="730" height="730" data="demo.swf" type="application/x-shockwave-flash">
-            <param value="demo.swf" name="movie">
+		<object id="flash-demo" name="flash-demo" width="730" height="730" data="http://myxus.games.dev.mail.ru/swf/MMDemoApp/demo.swf" type="application/x-shockwave-flash">
+            <param value="http://myxus.games.dev.mail.ru/swf/MMDemoApp/demo.swf" name="movie">
             <param value="always" name="AllowScriptAccess">
             <param value="all" name="allowNetworking">
             <param value="true" name="allowFullScreen">
