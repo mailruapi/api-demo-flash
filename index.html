@@ -13,6 +13,11 @@
 	<body>
 		<script  src="http://connect.mail.ru/js/loader.js" type="text/javascript" charset="utf-8"></script>
 		<script>
+			mailru.loader.require('api', function() {
+				if (mailru.session.is_app_user != 1) {
+					mailru.app.users.requireInstallation();
+				}
+			});
 			function flashLog(data){
 				document.getElementById('console').innerHTML += data + '\n'; 
                                 document.getElementById('console').focus();
