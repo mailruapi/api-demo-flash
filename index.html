@@ -13,6 +13,12 @@
 	<body>
 		<script  src="http://connect.rapira9.mail.ru/js/loader.js" type="text/javascript" charset="utf-8"></script>
 		<script>
+		    mailru.loader.require('api', function(){
+		        mailru.app.init('f43ffba892cf0435fc342100126e3a29');
+		        if(mailru.session.is_app_user != 1){
+                    mailru.app.users.requireInstallation();
+		        }
+		    })
 			function flashLog(data){
 				document.getElementById('console').innerHTML += data + '\n'; 
                                 document.getElementById('console').focus();
